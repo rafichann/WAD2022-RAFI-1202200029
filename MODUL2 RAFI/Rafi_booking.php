@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-
+    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-<title>Halaman utama</title>
+<title>Booking</title>
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -67,7 +67,7 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      .bawah {
+      .footer {
         text-align: center;
       }
     </style>
@@ -83,78 +83,72 @@
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>     
-               <a href="home.php" class="nav-link px-2 text-white">Home</a>
-               <a href="booking.php" class="nav-link px-2 text-white">Booking</a>
+               <a href="Rafi_home.php" class="nav-link px-2 text-white">Home</a>
+               <a href="Rafi_mybooking.php" class="nav-link px-2 text-white">Booking</a>
           </div>
         </div>
       </header>
 
 <main>
     <?php 
-    $nama = "Rafi";
+    $name = "RAFI_1202200029";
+    $date = isset($_GET['date']) ? $_GET['date'] : '';
+    $time = isset($_GET['time']) ? $_GET['time'] : '';
+    $days = isset($_GET['days']) ? $_GET['days'] : '';
+    $cartype = isset($_GET['cartype']) ? $_GET['cartype'] : '';
+    $phonenumber = isset($_GET['phonenumber']) ? $_GET['phonenumber'] : '';
+    $hp = isset($_GET['hp']) ? $_GET['hp'] : '';
+    $driver = isset($_GET['driver']) ? $_GET['driver'] : '';
+    $fuel = isset($_GET['fuel']) ? $_GET['fuel'] : '';
+
+    $service = $hp or $driver or $fuel;
     ?> 
   <section class="py-5 text-center container">
     <div >
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 >Welcome To EAD RENT</h1>
-        <p class="lead text-muted">Find Your Best Deal, Here!</p>
+        <h3 >Thank You <?php echo $name ?> For Reserving</h3>
+        <h5 >Please double check your reservation details</h5>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <table class="table table-success table-striped">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.toyota.astra.co.id/sites/default/files/2021-08/1-white.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Toyota Rush</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"> 7 kursi</li>
-              <li class="list-group-item">1500 CC</li>
-              <li class="list-group-item">Manual</li>
-            </ul>
-            
-            <a type="button" class="btn btn-outline-primary" href="mesen.php">Book Now</a>
-          
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="https://www.toyota.astra.co.id/sites/default/files/2022-08/4-agya-2022-white.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Toyota Agya</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"> 5 kursi</li>
-              <li class="list-group-item">1200 CC</li>
-              <li class="list-group-item">Manual</li>
-            </ul>
-            <a type="button" class="btn btn-outline-primary" href="mesen.php">Book Now</a>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="https://asset.honda-indonesia.com/variants/images/Vos4HUL6XFLHnM2dhTzGbzdNHpvNTnBNBKhZwxc0.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Honda Brio</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"> 5 kursi</li>
-              <li class="list-group-item">1200 CC</li>
-              <li class="list-group-item">Automatic</li>
-            </ul>
-            <a type="button" class="btn btn-outline-primary" href="mesen.php">Book Now</a>
-          </div>   
-       
-      </div>
+  <thead>
+    <tr>
+      <th scope="col">Booking Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Check in</th>
+      <th scope="col">Check Out</th>
+      <th scope="col">Car Type</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Service(s)</th>
+      <th scope="col">Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><?php
+echo(rand() . "<br>");?></td>
+      <td><?php echo $name ?></td>
+      <td><?php echo $date ?></td>
+      <td><?php echo $time ?></td>
+      <td><?php echo $cartype ?></td>
+      <td><?php echo $phonenumber ?></td>
+      <td><?php echo $service ?></td>
+      <td></td>
+    </tr>
+  </tbody>
     </div>
   </div>
+</table>
 
 </main>
 
 <footer>
     <div class="card-footer text-muted">
-        <p class="bawah"> <?php echo "RAFI_1202200029" ?></p>
+        <p class="footer"> <?php echo $name ?></p>
       </div>
 </footer>
 

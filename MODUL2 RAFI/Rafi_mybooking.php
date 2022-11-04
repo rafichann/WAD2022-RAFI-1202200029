@@ -8,14 +8,15 @@
     <meta name="generator" content="Hugo 0.104.2">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<title>EAD Rent</title>
-<?php 
-    $name = "Rafi";
-    ?> 
 
-    
+<title>Booking Mobil PBB</title>
+
+<?php 
+    $name = "RAFI_1202200029";
+    ?> 
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -70,7 +71,7 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      .bawah {
+      .footer {
         text-align: center;
       }
     </style>
@@ -81,8 +82,8 @@
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>     
-               <a href="home.php" class="nav-link px-2 text-white">Home</a>
-               <a href="booking.php" class="nav-link px-2 text-white">Booking</a>
+               <a href="Rafi_home.php" class="nav-link px-2 text-white">Home</a>
+               <a href="Rafi_mybooking.php" class="nav-link px-2 text-white">Booking</a>
           </div>
         </div>
       </header>
@@ -101,7 +102,7 @@
         <div class="col-sm-6 col-md-8">
           <div class="row g-5">
             <div class="col-md-7 col-lg-8">
-              <form class="" action="booking.php" method="GET">
+              <form class="" action="Rafi_booking.php" method="GET">
                 <div class="row g-3">
                 <div class="col-12">
                     <label for="name" class="form-label">Name</label>
@@ -124,12 +125,12 @@
                 </div>
 
                   <div class="col-12">
-                    <label for="car" class="form-label">Car Type</label>
-                    <select class="form-select" id="car" name="car">
+                    <label for="cartype" class="form-label">Car Type</label>
+                    <select class="form-select" id="cartype" name="cartype">
                     <option selected>Open this select menu</option>
-                    <option value="hrv">Toyota Rush</option>
-                    <option value="scirocco">Toyota Ayla</option>
-                    <option value="mazda">Honda Brio</option>
+                    <option value="rush">Toyota Rush</option>
+                    <option value="ayla">Toyota Ayla</option>
+                    <option value="brio">Honda Brio</option>
                     </select>
                   </div>
         
@@ -144,15 +145,15 @@
                 <div class="my-3">
                 <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="hp" id="hp">
-                <label class="form-check-label" >Health Protocol / Rp25000</label>
+                <label class="form-check-label" >Health Protocol / Rp.25.000</label>
                 </div>
                 <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="driver" id="driver">
-                <label class="form-check-label" >Driver / Rp100000</label>
+                <label class="form-check-label" >Driver / Rp.100.000</label>
                 </div>
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="bensin" id="bensin">
-                <label class="form-check-label">Fuel filled / Rp250000</label>
+                <input class="form-check-input" type="checkbox" value="fuel" id="fuel">
+                <label class="form-check-label">Fuel filled / Rp.250.000</label>
                 </div>
                 </div>
         
@@ -168,12 +169,12 @@
             </div>
           </div>
   </div>
- 
+  
   </main>
 
   <footer>
     <div class="card-footer text-muted">
-        <p class="bawah"> <?php echo "RAFI_1202200029" ?></p>
+        <p class="footer"> <?php echo $name ?></p>
       </div>
 </footer>
 </div>
