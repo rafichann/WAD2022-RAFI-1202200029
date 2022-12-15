@@ -1,4 +1,6 @@
 <?php
+require "../config/connector.php";
+
 session_start();
 if (isset($_COOKIE["email"]) && isset($_COOKIE["password"])) {
     $email = $_COOKIE["email"];
@@ -17,7 +19,7 @@ if (isset($_POST["login"])) {
     $password = $_POST['password'];
     $query = mysqli_query($connector, "SELECT * FROM user_rafi WHERE email='$email'");
     //cek email  
-    if (mysqli_num_rows($querry) === 1) {
+    if (mysqli_num_rows($query) === 1) {
         //cek password
         $data = mysqli_fetch_assoc($query);
         if (password_verify($password, $data["password"])) {
